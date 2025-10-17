@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Registered Users</title>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 20px;
+  }
+
+  #userTable {
+    flex: 1; 
+  }
+
+  #logoutBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-self: center; 
+  }
+</style>
+</head>
+<body>
+
+<h1>All Registered Users</h1>
+
+<table id="userTable" class="display" style="width:100%" border="1">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Country Code</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+</table>
+
+<button id="logoutBtn">Logout</button>
+
+<script src="JS/userHtml.js"></script>
+</body>
+</html>

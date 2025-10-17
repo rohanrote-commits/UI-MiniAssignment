@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $('#signUpBtn').click(function() {
+    $('#signUpForm').submit(function(e) {
+        e.preventDefault();
         let user = {
             name: $('#signupName').val(),
             email: $('#signupEmail').val(),
@@ -23,10 +24,13 @@ $(document).ready(function() {
                 alert("Sign Up Successful");
             },
             error: function(xhr, status, error) {
-                console.log("XHR:", xhr);
-                console.log("Status:", status);
-                console.log("Error:", error);
-                alert("Sign Up Failed: " + (xhr.responseText || error));
+                if(xhr.status === 409) {
+                    alert("Email is already registered");
+                } else if(xhr.status === 400) {
+                    alert("Passwords do not match");
+                } else {
+                    alert("Sign Up Failed: " + (xhr.responseText || "Server error"));
+                }
             }
         });
     });
