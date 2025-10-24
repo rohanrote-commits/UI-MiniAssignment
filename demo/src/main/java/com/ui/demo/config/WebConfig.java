@@ -14,7 +14,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(sessionInterceptor)
-                .addPathPatterns("/ui/**") // protect all /ui routes
+                .addPathPatterns("/ui/**")
                 .excludePathPatterns("/ui/user/logout", "/ui/user/signup", "/css/**", "/js/**"); // exclude login/signup/static
     }
 }
