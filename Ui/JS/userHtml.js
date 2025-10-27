@@ -28,7 +28,10 @@ $('#userTable').DataTable({
         $.ajax({
             url: 'http://localhost:8080/ui/user/all-data',
             type: 'GET',
-            xhrFields: { withCredentials: true },
+    
+            headers : {
+                'Authorization' : sessionStorage.getItem("token")
+            },
             data: { page: page, size: size },
             success: function(result) {
                 callback({
@@ -56,8 +59,11 @@ $('#logoutBtn').click(function() {
         $.ajax({
             url: 'http://localhost:8080/ui/user/logout',
             type: 'POST',
-            xhrFields: { withCredentials: true },
+                   headers : {
+                'Authorization' : sessionStorage.getItem("token")
+            },
             success: function() {
+                sessionStorage.removeItem("token");
                 alert("Logged out successfully");
                 window.location.href = "login.html";
             }

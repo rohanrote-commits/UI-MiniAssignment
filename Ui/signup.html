@@ -11,17 +11,17 @@
     <div class = "signup-container">
         <h1>Sign Up</h1>
         <form id = "signUpForm">
-            <input type="text" id = "signupName" placeholder="Username" required>
+            <input type="text" id = "signupName"name = "signupName" placeholder="Username" >
             <br>
-            <input type="email" id = "signupEmail" placeholder="email" required>
+            <input type="email" id = "signupEmail" name = "signupEmail" placeholder="email" >
             <br>
-            <input type="password" id = "signupPassword" placeholder="signupPassword" required>
+            <input type="password" id = "signupPassword" name="signupPassword" placeholder="signupPassword" >
             <br>
-            <input type="password" id ="signupConfirmPassword" placeholder="Confrim Password" required>
+            <input type="password" id ="signupConfirmPassword" name="signupConfirmPassword" placeholder="Confrim Password" >
             <br>
-            <input type="number"  id="signupMobileNumber" placeholder="Mobile Number" min="1000000000" max="9999999999" required>
+            <input type="number"  id="signupMobileNumber" name="signupMobileNumber" placeholder="Mobile Number" >
             <br>
-            <select id="countryCode" required>
+            <select id="countryCode" name ="countryCode" >
                 <option value="">Select Country Code</option>
                 <option value="91">+91 (India)</option>
                 <option value="1">+1 (USA)</option>
@@ -35,7 +35,9 @@
         </form>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="JS/jquery.js"></script>
+    <script src="JS/jquery.validate.min.js"></script>
+
     <script src = "JS/signUp.js"></script>
 </body>
 </html>

@@ -9,11 +9,13 @@ $(document).ready(function() {
             url : 'http://localhost:8080/ui/user/login',
             type : 'POST',
             contentType : 'application/json',
-            xhrFields: { withCredentials: true },
+            // xhrFields: { withCredentials: true },
+            crossDomain: true,
             data : JSON.stringify(user),
-            success : function(response){
-                if(response){
+            success : function(token){
+                if(token){
                     alert('Login Successful...');
+                    sessionStorage.setItem("token",token);
                     window.location.href = "userList.html";
                     
                 }

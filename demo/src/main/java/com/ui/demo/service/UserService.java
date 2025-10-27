@@ -55,13 +55,13 @@ public class UserService {
                 userSessionRepository.deleteUserSessionByEmail(loginDto.getEmail());
             }
            String token = UUID.randomUUID().toString();
-            // Create session entry
+
             UserSession session = new UserSession();
             session.setEmail(user.getEmail());
             session.setToken(token);
             session.setCreatedAt(LocalDateTime.now());
             session.setExpiresAt(LocalDateTime.now().plusMinutes(15));
-            session = userSessionRepository.save(session);
+            userSessionRepository.save(session);
 
             return ResponseEntity.ok(token);
         }else{
@@ -70,6 +70,7 @@ public class UserService {
     }
 
     public Page<User> getAllUsers(int page, int size){
+
         return userRepo.findAll(of(page,size));
     }
 
