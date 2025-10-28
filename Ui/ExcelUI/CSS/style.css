@@ -1,0 +1,55 @@
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  input[type="file"] {
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+  input[type="file"]:hover {
+    border-color: #007BFF;
+  }
+
+  #userTable{
+    width : 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  
+  #userTable th, #userTable td {
+    border : 1px solid #ccc;
+    padding : 8px;
+    text-align : center;
+  }
+
+  #userTable thead {
+    background-color: rebeccapurple;
+    font-weight: bold;
+  }
+  
+

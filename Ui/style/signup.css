@@ -53,3 +53,17 @@ body {
 .signup-container button:hover {
     background-color: #0056b3;
 }
+
+input.error, select.error {
+  border: 2px solid red;
+  background-color: #ffe6e6; 
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  margin-top: -5px;
+  margin-left: 0px;
+  text-align: left;
+  display: block;
+}

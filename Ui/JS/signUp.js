@@ -60,6 +60,13 @@ $(document).ready(function() {
       error.insertAfter(element);
     },
     
+    highlight : function(element){
+      $(element).addClass('error');
+    },
+    unhighlight : function(element){
+      $(element).removeClass('error')
+    },
+    
     
     submitHandler: function(form) {
       let user = {
