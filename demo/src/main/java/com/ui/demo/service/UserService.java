@@ -54,8 +54,8 @@ public class UserService {
             if(userSessionRepository.existsUserSessionByEmail(loginDto.getEmail())){
                 userSessionRepository.deleteUserSessionByEmail(loginDto.getEmail());
             }
-           String token = UUID.randomUUID().toString();
-
+//           String token = UUID.randomUUID().toString();
+//hello
             UserSession session = new UserSession();
             session.setEmail(user.getEmail());
             session.setToken(token);
